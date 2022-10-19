@@ -1,45 +1,231 @@
 @import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400&subset=latin,latin-ext);
 
-body{
-    font-family: 'Abyssinica SIL', serif;
-    padding: 0;
-    margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-    min-height: 100vh;
+*{
+   font-family: 'Roboto Condensed', sans-serif;
+   text-transform: uppercase;
 }
-button{
-    font-family: 'Abyssinica SIL', serif;
+
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+    --main-opacity: 0.1;
+}
+  
+body {
+    background: url(img/TSHIRTS/test_tshirt.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h4{
     font-size: 15px;
-    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+}
+p{
+    font-size: 15px;
+}
+
+.menu{
+    font-size: 17px;
+}
+.menu img{
+    height: 20%;
+    width: 20%;
+}
+
+.container {
+display: grid;
+height: 100vh;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows: 0.4fr 1.5fr 1.2fr 0.8fr;
+grid-template-areas:
+    "nav nav nav nav"
+    "main main main textbar"
+    "main main main textbar"
+    "options options options options";
+grid-gap: 0.2rem;
+font-weight: 800;
+/*text-transform: uppercase;*/
+font-size: 45px;
+color: #000000;
+text-align: center;
+}
+.container img{
+    height: 100%;
+}
+.container .textbar{
+    text-align: right;
+}
+
+.container2 {
+display: grid;
+height: 100vh;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows: 0fr 1.5fr 1.2fr 0.8fr;
+grid-template-areas:
+    "nav nav nav nav"
+    "textbar main main main"
+    "textbar main main main"
+    "textbar options options options";
+grid-gap: 0.2rem;
+font-weight: 800;
+/*text-transform: uppercase;*/
+font-size: 45px;
+color: #000000;
+text-align: center;
+}
+.container2 .textbar{
+    text-align: left;
+}
+
+.container3 {
+display: grid;
+height: 100vh;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows: 0fr 1.5fr 1.2fr 0.8fr;
+grid-template-areas:
+    "nav nav nav nav"
+    "main main main textbar"
+    "options options options options";
+grid-gap: 0.2rem;
+font-weight: 800;
+/*text-transform: uppercase;*/
+font-size: 45px;
+color: #000000;
+text-align: center;
+}
+.container3 .textbar{
+    text-align: right;
+}
+.container3 .options .textfooter a{
+    opacity: 1;
+}
+
+nav {
+background: rgba(255, 255, 255, var(--main-opacity));
+grid-area: nav;
+border-radius: var(--main-radius);
+padding-top: var(--main-padding);
+}
+
+main {
+background: rgba(255, 255, 255, var(--main-opacity));
+grid-area: main;
+border-radius: var(--main-radius);
+padding-top: var(--main-padding);
+}
+
+.textbar {
+background: rgba(255, 255, 255, var(--main-opacity));
+grid-area: textbar;
+border-radius: var(--main-radius);
+padding-top: var(--main-padding);
+}
+
+.options {
+background: rgba(255, 255, 255, var(--main-opacity));
+grid-area: options;
+border-radius: var(--main-radius);
+padding-top: var(--main-padding);
+}
+.footer {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0, 0, 0, 0.15) 71%,rgba(255,255,255,0.001) 100%);
+    grid-area: options;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    }
+.textfooter a{     
+    color: #fff;
     display: block;
-    width: 135px;
-    height: 50px;
+}
+
+a {
+text-align: center;
+display: inline-block;
+/*font-family: inherit;*/
+text-decoration: none;
+font-weight: bold;
+margin: 1rem;
+}
+a:visited { 
+    text-decoration: none; 
+    color: #fff; 
+}
+
+button{
+    /*position: relative;
+    display: block;
+    width: 150%;
+    /*height: 20px;*/
     padding: 10px;
-    margin: 20px;
-    background: black;
+    /*border-radius: 4px;
+    margin: 20px;*/
+    background: rgb(0, 0, 0);
     cursor: pointer;
-    border-radius: 4px;
     overflow: hidden;
-    color: white;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;
 }
 button:hover{
     color: rgb(221, 221, 221);
-    transition: ease-in 0.3s;
+    transition: ease-in 0.2s;
 }
 button:active{
     color: rgb(96, 96, 96);
-    transition: ease-in 0.1s;
+    transition: ease-in 0.2s;
 }
 
-p{
-    font-family: 'Abyssinica SIL', serif;
-    margin-left: 20px;
-}
 
-.logo img{
-    width: 43.75px;
-    height: 50px;
+
+
+
+
+
+
+
+
+
+
+/*RESPONSIVE*/
+@media only screen and (max-width: 953px) {
+.container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.7fr 1.3fr 1.1fr 5.2fr;
+    grid-template-areas:
+    "nav"
+    "textbar"
+    "options"
+    "main";
 }
+.container .textbar{
+    text-align: center;
+}
+.container2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr 1.3fr 1.1fr 5.2fr;
+    grid-template-areas:
+    "nav"
+    "textbar"
+    "options"
+    "main";
+}
+.container2 .textbar{
+    text-align: center;
+}
+.container3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr 1.3fr 2.5fr 3.2fr;
+    grid-template-areas:
+    "nav"
+    "textbar"
+    "main"
+    "options";
+}
+.container3 .textbar{
+    text-align: center;
+}
+}
+/*RESPONSIVE*/
