@@ -5,111 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>116 | Custom-made & Unique Clothing</title>
-    <link rel="icon" href="img/LOGO/123.png"/>
+    <link rel="icon" href="img/LOGO/logo_v1.1.png"/>
     <link rel="stylesheet" href="style.css"/>
-    <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">-->
-    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet">
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-    (function(){
-    emailjs.init("ud9blAKla3Urs1k29");
-    })();
-    </script>
 </head>
-
 <body>
-  <div class="bg"></div>
+    <div class="new"><p> A brand new collection is coming soon.</p></div>
+    <button type="button" onclick="location.href='https://donate.stripe.com/4gwcNmbGe1Rx1kk5kl'">DONATE</button>
+    <!--<div class="logo"><img src="img/LOGO/logo_v1.1.png" alt="Logo de la marque 116™"></div>-->
 
-  <div class="container">
-    <nav>
-      <div class="menu">
-        <a href="#"><h4>News</h4></a>
-        <a href="#"><h4>Ambassadors</h4></a>
-        <a href="https://donate.stripe.com/4gwcNmbGe1Rx1kk5kl"><h4>Donate</h4></a>
-      </div>
-    </nav>
-    <main>
-      <div id="canvas"><canvas></canvas></div>
-      <div class="form"><input type="text" placeholder="name" id="paintedby" required></div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Filesaver.js/1.3.8/FileSaver.min.js"></script>
-      <script src="script.js"></script>
-      <!--<img src="img/TSHIRTS/Design/Back_wbg.png" alt="T-shirt Back Design">-->
-      <img src="img/TSHIRTS/tshirt_blanc_vbeta.png" alt="T-shirt Back Design">
-    </main>
-    
-    <div class="textbar">
-      <h3>1. Let your creativity speak</h3>
-      <p>draw what ever you want.<br>You can also change the colors to match what you have in mind for your creation.
-      </p>
-    </div>
-    <div class="options"><h4>T-shirt    |    Brush</h4>
-      <div class="tools">
-        <div class="color-fields">
-          <div onClick="change_color(this)" class="color-field" style="background: red;"></div>
-          <div onClick="change_color(this)" class="color-field" style="background: blue;"></div>
-          <div onClick="change_color(this)" class="color-field" style="background: green;"></div>
-          <div onClick="change_color(this)" class="color-field" style="background: yellow;"></div>
-        </div>
-
-        <button onClick="undo_last()" type="button" id="undo">Undo</button>
-        <button onClick="clear_canvas()" type="button" id="clear">Clear</button>
-
-        <div class="color-fields2">
-          <div onClick="change_color(this)" class="color-field2" style="background: red;"></div>
-          <div onClick="change_color(this)" class="color-field2" style="background: blue;"></div>
-          <div onClick="change_color(this)" class="color-field2" style="background: green;"></div>
-          <div onClick="change_color(this)" class="color-field2" style="background: yellow;"></div>
-        </div>
-
-        <!--<input type="color" class="color-picker" oninput="draw_color = this.value">-->
-        <input type="range" min="5" max="10" class="pen-range" oninput= "draw_width = this.value">
-      </div>
-      <button id="download">Download</button>
-    </div>
-  </div>
-
-
-  <div class="container2">
-    <main>
-      <!--FORM-->  
-      <div class="form">
-              <input type="text" placeholder="Full name" id="name" required>
-              <input type="email" placeholder="Email" id="email" required>
-              <input type="email" placeholder="Confirm Email" id="email" autocomplete="off" required>
-              <input type="text" placeholder="Code" id="code" autocomplete="off" required>
-              <button id="btn" onclick="SendMail()">Save</button>
-              <h4 id="msg"></h4>
-          </form>
-      </div>
-      <!--FORM--> 
-    </main>
-    <div class="textbar">
-      <h3>2. Fill the form</h3>
-      <p>No need to create an account, it's was a pain... <br>please enter your real contact information so that the order can be completed and arrive to you safe and sound*.</p>
-    </div>
-  </div>
-
-
-  <div class="container3">
-    <main>
-      <button type="button" onclick="location.href='https://buy.stripe.com/00g9Ba25E9jZe7628a'">Go to card</button>
-    </main>
-    <div class="textbar">
-      <h3>3. Pay</h3>
-      <p>Created, packaged, sent and received within 3 days*. <br>Any advance ?</p>
-    </div>
-    <div class="footer">
-      <div class="textfooter">
-        <a href="#"><h4>Help</h4></a>
-        <a href="#"><h4>Privacy</h4></a>
-        <a href="#"><h4>abc</h4></a>
-        <a href="#"><h4>def</h4></a>
-        <a href="#"><h4>ghi</h4></a>
-        <div class="copyright"><h4>© 2022 116.</h4></div>
-      </div>
-    </div>
-  </div>
 </body>
 </html>
