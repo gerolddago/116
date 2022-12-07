@@ -1,17 +1,82 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>116 | Custom-made & Unique Clothing</title>
-    <link rel="icon" href="img/LOGO/logo_v1.1.png"/>
-    <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-    <div class="new"><p> A brand new collection is coming soon.</p></div>
-    <button type="button" onclick="location.href='https://donate.stripe.com/4gwcNmbGe1Rx1kk5kl'">DONATE</button>
-    <!--<div class="logo"><img src="img/LOGO/logo_v1.1.png" alt="Logo de la marque 116™"></div>-->
+        <link rel="stylesheet" type="text/css" href="style-crea.css">
+        <!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    </head>
 
-</body>
+    <script src="script-crea.js"></script>
+
+    <body>
+        <img src="img/pexels-monstera-6311250.jpg" alt="Background Picture" id="backgroundPicture">
+
+        <header><h2>116STORE.COM</h2></header>
+
+        <div id="sidebar">
+            <!-- Color picker for drawing pecil -->
+            <div class="colorButtons">
+                <h3>Colour</h3>
+                <input type="color" id="colorpicker" class="colorpicker" value="#000000">
+            </div>
+            <!-- color picker for background -->
+            <div class="colorButtons">
+                <h3>Bg Color</h3>
+                <input type="color" id="bgcolorpicker" class="colorpicker" value="#ffffff">
+            </div>
+            <!-- tools eraser and clear  -->
+            <div class="toolsbuttons">
+                <h3>Tools</h3>
+                <button id="eraser" class="btn btn-default">
+                    <!--<span class="glyphicon glyphicon-erase" aria-hidden="true"></span>-->
+                    Eraser
+                </button> 
+                <button id="clear" class="btn btn-danger">
+                    <!--<span class="glyphicon glyphicon-repeat" aria-hidujh den="true"></span>-->
+                    Clear
+                </button> 
+            </div>
+            <!-- change thickness on drawing pencil -->
+            <div class="buttonSize">
+                <h3>Size(<span id="showSize">9</span>)</h3>
+
+                <input type="range" min="7" max="20" value="9"  step="1" id="controlSize">
+            </div>
+            <!-- Canvas sizes change
+            <div class="canvasSize">
+                <h3>Canvas</h3>
+                <div class="input-group">
+                    <span class="input-group-addon">X</span>
+                    <input type="number" id="sizeX" class="form-control" placeholder="sizeX" value="800" class="size">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">Y</span>
+                    <input type="number" id="sizeY" class="form-control" placeholder="sizeY" value="800" class="size">
+                </div>
+                <input type="button" class="updateSize btn btn-success" value="update" id="canvasUpdate">
+            </div> -->
+
+            <!-- saving the image -->
+
+            <div class="Storage">
+                <h3>Storage</h3>
+                <input type="button" value="save" class="btn btn-danger" id="save">
+                <input type="button" value="load" class="btn btn-warning" id="load">
+                <input type="button" value="clear" class="btn btn-success" id="clearCache">
+            </div>
+
+            <!-- Download the drawing -->
+
+            <div class="extra">
+                <h3>Extra</h3>
+                <a id="saveToImage" class="btn btn-warning">Download</a>
+            </div>
+
+
+        </div>
+        
+    </body>
+
 </html>
